@@ -105,7 +105,8 @@ hr {
 }
 
 .new_posts {
-	background-color: var(--mainBlack);
+	background-position: center;
+	background-size: cover;
 }
 
 /*Most popular posts*/
