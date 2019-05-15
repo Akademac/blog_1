@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400, 700');
+
+:root {
+	--mainWhite: #fff;
+	--mainBlack: #312D2C;
+	--mainGrey: #F5F5F5;
+	--darkGrey: #7e7e7e;
+	--mainGreen: #09A070;
+	--secondBlack: #464646;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Robote', sans-serif;
+	overflow-x: hidden;
+}
+
+
+/*Header*/
+
+#header {
+	width: 100%;
+	height: 100vh;
+	background-image: url('Images/main_header.jpg');
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	background-attachment: fixed;
+}
+
+#title {
+	margin: 0px;
+	display: inline;
+	padding: 1rem;
+	opacity: .9;
+}
+
+/*Search and Filter*/
+
+#f_s {
+	width: 100%;
+	height: 3rem;
+	background-color: var(--mainBlack);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: .5rem;
+}
+
+#main_search {
+	width: 17rem;
+	margin: 0px auto;
+	margin-top: .5rem;
+	height: 2rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+	padding-left: .5rem;
+
+}
+
+#main_filter {
+	float: right;
+	display: inline-block;
+	position: relative;
+	width: 12rem;
+	height: 2.2rem;
+	margin: 0px auto;
+	border: none;
+	border-radius: 5px;
+	margin-top: .5rem;
+}
+
+/*Newest Posts*/
+
+#newest_container {
+	width: 100%;
+	height: 100rem;
+	background-color: var(--mainGrey);
+	margin-top: 0px;
+	text-align: center;
+	padding: 1rem;
+}
+
+#newest_h {
+	color: var(--mainBlack);
+}
+
+hr {
+	width: 50%;
+}
+
+#newest_posts {
+	width: 80%;
+	height: 80%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-gap: 1rem;
+	margin: 4rem auto;
+}
+
+.new_posts {
+	background-color: var(--mainBlack);
+}
+
+/*Most popular posts*/
+
+
+#most_p_container {
+	width: 100%;
+	height: 40rem;
+	background-color: var(--mainBlack);
+	color: var(--mainWhite);
+	margin-top: 0px;
+	text-align: center;
+	padding: 1rem;
+}
+
+#most_p_posts {
+	width: 80%;
+	height: 80%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin: 2rem auto;
+	grid-gap: 1rem;
+}
+
+#lg_m_p {
+	background-color: var(--mainWhite);
+}
+
+#sm_m_p {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 1rem;
+}
+
+.sm_m_p {
+	background-color: var(--mainGrey);	
+}
+
+/*Footer*/
+
+#footer {
+	width: 100%;
+	height: 2rem;
+	background-color: var(--mainGrey);
+	text-align: center;
+}
+
+#footer > p {
+	margin: 0px;
+	padding: .5rem;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
