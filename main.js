@@ -25,6 +25,10 @@ let sm_m_p = document.querySelectorAll('.sm_m_p');
 let smp_date_day = document.querySelectorAll('.smp_date_day');
 let smp_date_month = document.querySelectorAll('.smp_date_month');
 
+let orderOldest = document.querySelector('#oldest');
+
+let newest_h  = document.querySelector('#newest_h');
+
 
 window.addEventListener('load', () => {
 	fetch('https://akademac.github.io/testJson_3/test_josn_3.json')
@@ -73,5 +77,25 @@ window.addEventListener('load', () => {
 			let smp = new Newest(smp_title[i], smp_text[i], smp_views[i], smp_likes[i], sm_m_p[i], smp_date_day[i], smp_date_month[i]);
 			smp.add(i);
 		}
+		
+		let x = 0;
+
+
+		function oldest(e) {
+			e.target.removeEventListener(e.type, arguments.callee);
+
+			for(let i=new_posts.length-1; i>=0; i--) {
+				newest_likes[x].innerHTML = '';
+				newest_views[x].innerHTML = '';
+		 		let np = new Newest(newest_title[x], newest_text[x], newest_views[x], newest_likes[x], new_posts[x], new_date_day[x], new_date_month[x]);
+		 		np.add(i);
+		 		x++;		 				
+		 	};
+
+		 	newest_h.innerHTML = 'Oldest';	
+		 };
+
+		orderOldest.addEventListener('click', oldest);		
+
 	});
 })
