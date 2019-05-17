@@ -25,8 +25,13 @@ let sm_m_p = document.querySelectorAll('.sm_m_p');
 let smp_date_day = document.querySelectorAll('.smp_date_day');
 let smp_date_month = document.querySelectorAll('.smp_date_month');
 
+let orderOldest = document.querySelector('#oldest');
 
-window.addEventListener('load', () => {
+let newest_h  = document.querySelector('#newest_h');
+
+
+
+	console.log('first');
 	fetch('https://akademac.github.io/testJson_3/test_josn_3.json')
 	.then(response => {
 		return response.json();
@@ -73,5 +78,62 @@ window.addEventListener('load', () => {
 			let smp = new Newest(smp_title[i], smp_text[i], smp_views[i], smp_likes[i], sm_m_p[i], smp_date_day[i], smp_date_month[i]);
 			smp.add(i);
 		}
+		
+		let x = 0;
+
+
+		function oldest(e) {
+			e.target.removeEventListener(e.type, arguments.callee);
+
+			for(let i=new_posts.length-1; i>=0; i--) {
+				newest_likes[x].innerHTML = '';
+				newest_views[x].innerHTML = '';
+		 		let np = new Newest(newest_title[x], newest_text[x], newest_views[x], newest_likes[x], new_posts[x], new_date_day[x], new_date_month[x]);
+		 		np.add(i);
+		 		x++;		 				
+		 	};
+
+		 	newest_h.innerHTML = 'Oldest';	
+		 };
+
+		orderOldest.addEventListener('click', oldest);		
 	});
-})
+
+	new_posts.forEach(e => {
+		e.addEventListener('click', ee => {
+			let post = ee.target.dataset.every;
+			console.log(post);
+			if(post == 1) {
+				window.open('blogs.html#1', '_self');
+			}
+			else if(post == 2) {
+				window.open('blogs.html#2', '_self');
+			}
+			else if(post == 3) {
+				window.open('blogs.html#3', '_self');
+			}
+			else if(post == 4) {
+				window.open('blogs.html#4', '_self');
+			}
+			else if(post == 5) {
+				window.open('blogs.html#5', '_self');
+			}
+			else if(post == 6) {
+				window.open('blogs.html#6', '_self');
+			}
+			else if(post == 7) {
+				window.open('blogs.html#7', '_self');
+			}
+			else if(post == 8) {
+				window.open('blogs.html#8', '_self');
+			}
+			else if(post == 9) {
+				window.open('blogs.html#9', '_self');
+			}			
+			else if(post == 10) {
+				window.open('blogs.html#10', '_self');
+			}
+		});
+	});
+
+

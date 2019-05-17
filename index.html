@@ -25,10 +25,9 @@
 
 	<div id='f_s'>
 		<input type="text" name="search" placeholder="search for topic" id='main_search' />
-		<select id='main_filter'>
-			<option>Newest</option>
-			<option>Oldest</option>
-		</select>
+		<div id='main_filter'>
+			<div id='oldest'>Oldest</div>
+		</div>
 	</div>
 
 <!-- New Posts-->
@@ -37,7 +36,7 @@
 		<h2 id='newest_h'>Newest</h2>
 		<hr />
 		<div id='newest_posts'>
-			<div class='new_posts'>
+			<div class='new_posts' data-every='1'>
 				<h3 class='newest_title'></h3>
 				<div class='date'>
 					<p class="date_day"></p>
@@ -51,21 +50,7 @@
 					<i class="fas fa-eye"></i>
 				</span>
 			</div>
-			<div class='new_posts'>
-				<h3 class='newest_title'></h3>
-				<div class='date'>
-					<p class="date_day"></p>
-					<p class='date_month'></p>
-				</div>
-				<p class='newest_text'></p>
-				<span class='newest_likes'>
-					<i class="fas fa-thumbs-up"></i>
-				</span>
-				<span class='newest_views'>
-					<i class="fas fa-eye"></i>
-				</span>				
-			</div>
-			<div class='new_posts'>
+			<div class='new_posts' data-every='2'>
 				<h3 class='newest_title'></h3>
 				<div class='date'>
 					<p class="date_day"></p>
@@ -79,7 +64,21 @@
 					<i class="fas fa-eye"></i>
 				</span>				
 			</div>
-			<div class='new_posts'>
+			<div class='new_posts' data-every='3'>
+				<h3 class='newest_title'></h3>
+				<div class='date'>
+					<p class="date_day"></p>
+					<p class='date_month'></p>
+				</div>
+				<p class='newest_text'></p>
+				<span class='newest_likes'>
+					<i class="fas fa-thumbs-up"></i>
+				</span>
+				<span class='newest_views'>
+					<i class="fas fa-eye"></i>
+				</span>				
+			</div>
+			<div class='new_posts' data-every='4'>
 				<h3 class='newest_title'></h3>
 				<div class='date'>
 					<p class="date_day"></p>
@@ -93,7 +92,7 @@
 					<i class="fas fa-eye"></i>
 				</span>				
 			</div>
-			<div class='new_posts'>
+			<div class='new_posts' data-every='5'>
 				<h3 class='newest_title'></h3>
 				<div class='date'>
 					<p class="date_day"></p>
@@ -107,7 +106,7 @@
 					<i class="fas fa-eye"></i>
 				</span>				
 			</div>
-			<div class='new_posts'>
+			<div class='new_posts' data-every='6'>
 				<h3 class='newest_title'></h3>
 				<div class='date'>
 					<p class="date_day"></p>
@@ -121,7 +120,7 @@
 					<i class="fas fa-eye"></i>
 				</span>				
 			</div>
-			<div class='new_posts'>
+			<div class='new_posts' data-every='7'>
 				<h3 class='newest_title'></h3>
 				<div class='date'>
 					<p class="date_day"></p>
@@ -135,7 +134,7 @@
 					<i class="fas fa-eye"></i>
 				</span>				
 			</div>
-			<div class='new_posts'>
+			<div class='new_posts' data-every='8'>
 				<h3 class='newest_title'></h3>
 				<div class='date'>
 					<p class="date_day"></p>
@@ -149,7 +148,7 @@
 					<i class="fas fa-eye"></i>
 				</span>				
 			</div>
-			<div class='new_posts'>
+			<div class='new_posts' data-every='9'>
 				<h3 class='newest_title'></h3>
 				<div class='date'>
 					<p class="date_day"></p>
@@ -163,7 +162,7 @@
 					<i class="fas fa-eye"></i>
 				</span>				
 			</div>			
-			<div class='new_posts'>
+			<div class='new_posts' data-every='10'>
 				<h3 class='newest_title'></h3>
 				<div class='date'>
 					<p class="date_day"></p>
@@ -270,6 +269,5 @@
 <!--Main JS-->
 
 		<script src='main.js'></script>
-
 	</body>
 </html>
