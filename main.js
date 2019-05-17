@@ -30,7 +30,8 @@ let orderOldest = document.querySelector('#oldest');
 let newest_h  = document.querySelector('#newest_h');
 
 
-window.addEventListener('load', () => {
+
+	console.log('first');
 	fetch('https://akademac.github.io/testJson_3/test_josn_3.json')
 	.then(response => {
 		return response.json();
@@ -96,6 +97,43 @@ window.addEventListener('load', () => {
 		 };
 
 		orderOldest.addEventListener('click', oldest);		
-
 	});
-})
+
+	new_posts.forEach(e => {
+		e.addEventListener('click', ee => {
+			let post = ee.target.dataset.every;
+			console.log(post);
+			if(post == 1) {
+				window.open('blogs.html#1', '_self');
+			}
+			else if(post == 2) {
+				window.open('blogs.html#2', '_self');
+			}
+			else if(post == 3) {
+				window.open('blogs.html#3', '_self');
+			}
+			else if(post == 4) {
+				window.open('blogs.html#4', '_self');
+			}
+			else if(post == 5) {
+				window.open('blogs.html#5', '_self');
+			}
+			else if(post == 6) {
+				window.open('blogs.html#6', '_self');
+			}
+			else if(post == 7) {
+				window.open('blogs.html#7', '_self');
+			}
+			else if(post == 8) {
+				window.open('blogs.html#8', '_self');
+			}
+			else if(post == 9) {
+				window.open('blogs.html#9', '_self');
+			}			
+			else if(post == 10) {
+				window.open('blogs.html#10', '_self');
+			}
+		});
+	});
+
+

@@ -417,16 +417,13 @@ hr {
 }
 
 #blog_imgs div:nth-child(1) {
-	background-image: url("Images/Topics/pink_floyd_2.jpg");
 	background-position: center;
 	background-size: cover;
 }
 #blog_imgs div:nth-child(2) {
-	background-image: url("Images/Topics/pink_floyd_3.jpg");
 	background-position: center;
 	background-size: cover;
 }#blog_imgs div:nth-child(3) {
-	background-image: url("Images/Topics/pink_floyd_4.jpg");
 	background-position: center;
 	background-size: cover;
 }
