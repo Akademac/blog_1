@@ -13,6 +13,12 @@ let blog_img1 = document.querySelector('#img1');
 let blog_img2 = document.querySelector('#img2');
 let blog_img3 = document.querySelector('#img3');
 
+let blog_video = document.querySelector('#video');
+
+let play = document.querySelector('#play');
+
+let pause = document.querySelector('#pause');
+
 let a = 1;
 
 fetch('https://akademac.github.io/testJson_3/test_josn_3.json')
@@ -28,6 +34,7 @@ fetch('https://akademac.github.io/testJson_3/test_josn_3.json')
 			blog_img1.style.backgroundImage = `url(${data[i].img2})`;
 			blog_img2.style.backgroundImage = `url(${data[i].img3})`;
 			blog_img3.style.backgroundImage = `url(${data[i].img4})`;
+			blog_video.src = `${data[i].video}`;
 		}
 		a++;
 	}
@@ -85,7 +92,7 @@ let p_1 =document.createElement('P');
 
 	div.appendChild(p_1);
 
-	div.style.width = '200px';
+	div.style.width = '400px';
 	div.style.borderRadius = '5px';
 	div.style.backgroundColor = 'white';
 	div.style.marginTop = '2px';
@@ -106,3 +113,15 @@ let p_1 =document.createElement('P');
 
 	num++;
 };
+
+play.addEventListener('click', () => {
+	blog_video.play();
+	play.style.display = 'none';
+	pause.style.display = 'block';
+});
+
+pause.addEventListener('click', () => {
+	blog_video.pause();
+	play.style.display = 'block';
+	pause.style.display = 'none';
+});
