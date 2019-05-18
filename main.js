@@ -103,35 +103,10 @@ let newest_h  = document.querySelector('#newest_h');
 		e.addEventListener('click', ee => {
 			let post = ee.target.dataset.every;
 			console.log(post);
-			if(post == 1) {
-				window.open('blogs.html#1', '_self');
-			}
-			else if(post == 2) {
-				window.open('blogs.html#2', '_self');
-			}
-			else if(post == 3) {
-				window.open('blogs.html#3', '_self');
-			}
-			else if(post == 4) {
-				window.open('blogs.html#4', '_self');
-			}
-			else if(post == 5) {
-				window.open('blogs.html#5', '_self');
-			}
-			else if(post == 6) {
-				window.open('blogs.html#6', '_self');
-			}
-			else if(post == 7) {
-				window.open('blogs.html#7', '_self');
-			}
-			else if(post == 8) {
-				window.open('blogs.html#8', '_self');
-			}
-			else if(post == 9) {
-				window.open('blogs.html#9', '_self');
-			}			
-			else if(post == 10) {
-				window.open('blogs.html#10', '_self');
+			for(let i=1; i<new_posts.length+1; i++) {
+				if(post == i) {
+					window.open(`blogs.html#${i}`, '_self');
+				}
 			}
 		});
 	});
