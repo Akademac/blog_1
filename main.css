@@ -146,6 +146,7 @@ hr {
 .newest_title {
 	color: var(--mainWhite);
 	font-weight: bold;
+	float: right;
 	padding: .5rem;
 }
 
@@ -180,11 +181,9 @@ hr {
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
 	position: absolute;
-	opacity: .8;
+	opacity: .5;
 	box-shadow: 1px 1px 1px black;
 	text-align: center;
-	margin-left: 25rem;
-	margin-top: -4.5rem;
 	border-radius: 5px;
 }
 
@@ -210,16 +209,14 @@ hr {
 
 #most_p_container {
 	width: 100%;
-	height: 40rem;
+	height: 60rem;
 	background-color: var(--mainBlack);
 	color: var(--mainWhite);
 	margin-top: 0px;
-	padding: 1rem;
 }
 
 #most_p_posts {
 	width: 80%;
-	height: 80%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	margin: 2rem auto;
@@ -265,6 +262,7 @@ hr {
 	color: var(--mainWhite);
 	font-weight: bold;
 	padding: .5rem;
+	float: right;
 }
 
 .mp_text {
@@ -280,14 +278,14 @@ hr {
 	float: right;
 	color: var(--mainWhite);
 	padding: .5rem;
-	padding-top: 17rem;
+	padding-top: 25rem;
 }
 
 .mp_views {
 	float: right;
 	color: var(--mainWhite);
 	padding: .5rem;
-	padding-top: 17rem;
+	padding-top: 25rem;
 }
 
 .mp_date {
@@ -301,8 +299,6 @@ hr {
 	opacity: .8;
 	box-shadow: 1px 1px 1px black;
 	text-align: center;
-	margin-left: 25rem;
-	margin-top: -4.2rem;
 	border-radius: 5px;
 }
 
@@ -340,14 +336,14 @@ hr {
 	float: right;
 	color: var(--mainWhite);
 	padding: .5rem;
-	padding-top: 5rem;
+	padding-top: 10rem;
 }
 
 .smp_views {
 	float: right;
 	color: var(--mainWhite);
 	padding: .5rem;
-	padding-top: 5rem;
+	padding-top: 10rem;
 }
 
 .smp_date {
@@ -361,9 +357,8 @@ hr {
 	opacity: .7;
 	box-shadow: 1px 1px 1px black;
 	text-align: center;
-	margin-left: 10rem;
-	margin-top: -4rem;
 	border-radius: 5px;
+	margin-top: 12rem;
 }
 
 .smp_date > p {
@@ -380,13 +375,14 @@ hr {
 	font-size: 1.3rem;
 }
 
+/*Second Page*/
 
 #blog_container {
 	width: 100%;
 	height: 300vh;
 	background-color: lightgrey; 
 	display: grid;
-	grid-template-columns: 65% 35%;
+	grid-template-columns: 50% 50%;
 
 }
 
@@ -398,7 +394,7 @@ hr {
 #text1 {
 	font-size: 1.5rem;
 	margin-left: 5rem;
-	width: 70%;
+	width: 80%;
 	text-align:justify;
 
 
@@ -413,10 +409,15 @@ hr {
 #blog_imgs {
 	display: grid;
 	grid-template-rows: repeat(3, 1fr);
+}
 
+.blog_imgs {
+	width: 80%;
+	height: 80%;
 }
 
 #blog_imgs div:nth-child(1) {
+	background-image: url("Images/Topics/pink_floyd_2.jpg");
 	background-position: center;
 	background-size: cover;
 }
@@ -504,4 +505,216 @@ hr {
 	padding: .25rem;
 	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
+}
+
+
+@media screen and (max-width: 900px) {
+
+/*Header*/
+
+	#header {
+		font-size: 2rem;
+	}
+/*Search and Filter*/
+
+	#f_s {
+		padding: 0px;
+	}
+
+	#main_search {
+		width: 10rem;
+	}
+/*Newest Posts*/
+
+	#newest_container {
+		height: 275rem;
+		padding: 0rem;
+	}
+
+	#newest_posts {
+		width: 80%;
+		height: 80%;
+		display: grid;
+		grid-template-columns: none;
+		grid-template-rows: repeat(10, 1fr);
+	}
+
+/*Most popular posts*/
+
+	#most_p_container {
+		height: 125rem;
+	}
+
+	#most_p_posts {
+		grid-template-rows: 30% 70%;
+		grid-template-columns: none;
+	}
+
+	#sm_m_p {
+		grid-template-columns: none;
+		grid-template-rows: repeat(4, 1fr);
+	}
+
+	.mp_likes {
+		padding-top: 17.5rem;
+	}
+
+	.mp_views {
+		padding-top: 17.5rem;
+	}
+	
+	.smp_likes {
+		padding-top: 10rem;
+	}
+
+	.smp_views {
+		padding-top: 10rem;
+	}
+
+	.smp_date {
+		margin-top: 10rem;
+	}
+}
+
+
+
+@media screen and (max-width: 500px) {
+	/*Header*/
+
+	#header {
+		font-size: 1rem;
+	}
+	/*Search and Filter*/
+
+	#f_s {
+		padding: 0px;
+	}
+
+	#main_search {
+		width: 7rem;
+		font-size: .7rem;
+		padding-left: 0px;
+	}
+	/*Newest Posts*/
+
+	#newest_container {
+		height: 320rem;
+		padding: 0rem;
+	}
+
+	#newest_posts {
+		width: 80%;
+		height: 80%;
+		display: grid;
+		grid-template-columns: none;
+		grid-template-rows: repeat(10, 1fr);
+	}
+
+	/*Most popular posts*/
+
+	#most_p_container {
+		height: 125rem;
+	}
+
+	#most_p_posts {
+		grid-template-rows: 20% 80%;
+		grid-template-columns: none;
+	}
+
+	#sm_m_p {
+		grid-template-columns: none;
+		grid-template-rows: repeat(4, 1fr);
+	}
+
+	.mp_likes {
+		padding-top: 1.5rem;
+	}
+
+	.mp_views {
+		padding-top: 1.5rem;
+	}
+	
+	.smp_likes {
+		padding-top: 10rem;
+	}
+
+	.smp_views {
+		padding-top: 10rem;
+	}
+
+	.smp_date {
+		margin-top: 12.5rem;
+	}
+
+}
+
+
+@media screen and (max-width: 350px) {
+	/*Header*/
+
+	#header {
+		font-size: 1rem;
+	}
+	/*Search and Filter*/
+
+	#f_s {
+		padding: 0px;
+	}
+
+	#main_search {
+		width: 7rem;
+		font-size: .7rem;
+		padding-left: 0px;
+	}
+	/*Newest Posts*/
+
+	#newest_container {
+		height: 330rem;
+		padding: 0rem;
+	}
+
+	#newest_posts {
+		width: 80%;
+		height: 80%;
+		display: grid;
+		grid-template-columns: none;
+		grid-template-rows: repeat(10, 1fr);
+	}
+
+	/*Most popular posts*/
+
+	#most_p_container {
+		height: 125rem;
+	}
+
+	#most_p_posts {
+		grid-template-rows: 20% 80%;
+		grid-template-columns: none;
+	}
+
+	#sm_m_p {
+		grid-template-columns: none;
+		grid-template-rows: repeat(4, 1fr);
+	}
+
+	.mp_likes {
+		padding-top: .1rem;
+	}
+
+	.mp_views {
+		padding-top: 0.1rem;
+	}
+	
+	.smp_likes {
+		padding-top: 10rem;
+	}
+
+	.smp_views {
+		padding-top: 10rem;
+	}
+
+	.smp_date {
+		margin-top: 12.5rem;
+	}
+
 }
