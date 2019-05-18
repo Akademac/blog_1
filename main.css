@@ -17,7 +17,6 @@ body {
 	background-color: #FCFCFC;
 }
 
-
 /*Header*/
 
 #header {
@@ -60,7 +59,6 @@ body {
 	padding-left: .5rem;
 
 }
-
 
 /*Newest Posts*/
 
@@ -220,7 +218,6 @@ hr {
 	opacity: 1;
 }
 
-
 .mp_title {
 	color: var(--mainWhite);
 	font-weight: bold;
@@ -278,7 +275,6 @@ hr {
 	margin-top: .7rem;
 	font-size: 1.3rem;
 }
-
 
 .smp_title {
 	color: var(--mainWhite);
@@ -346,7 +342,6 @@ hr {
 	background-color: lightgrey; 
 	display: grid;
 	grid-template-rows: 30% 70%;
-
 }
 
 #blog_text {
@@ -357,17 +352,14 @@ hr {
 
 #text1 {
 	font-size: 1.5rem;
-	margin-left: 1rem;
-	width: 90%;
+	margin-left: 5rem;
+	width: 70%;
 	text-align:justify;
-
-
 }
 
 #blog_title {
-	margin-left: 1rem;
+	margin-left: 5rem;
 	text-transform: uppercase;
-
 }
 
 #blog_imgs {
@@ -474,7 +466,6 @@ hr {
 	width: 4rem;
 	height: 1.3rem;
 	cursor: pointer;
-	/*transition: 1s all;*/
 }
 
 #blog_form > button:hover {
@@ -485,7 +476,6 @@ hr {
 #comment_title {
 	margin-left: 5rem;
 }
-
 
 .comments {
 	background-color: #FCFCFC;
@@ -522,6 +512,7 @@ hr {
 	#header {
 		font-size: 2rem;
 	}
+
 /*Search and Filter*/
 
 	#f_s {
@@ -646,6 +637,7 @@ hr {
 
 
 @media screen and (max-width: 500px) {
+
 /*Header*/
 
 	#header {
@@ -722,12 +714,14 @@ hr {
 
 
 @media screen and (max-width: 350px) {
-	/*Header*/
+
+/*Header*/
 
 	#header {
 		font-size: 1rem;
 	}
-	/*Search and Filter*/
+
+/*Search and Filter*/
 
 	#f_s {
 		padding: 0px;
@@ -738,7 +732,8 @@ hr {
 		font-size: .7rem;
 		padding-left: 0px;
 	}
-	/*Newest Posts*/
+
+/*Newest Posts*/
 
 	#newest_container {
 		height: 330rem;
@@ -753,7 +748,7 @@ hr {
 		grid-template-rows: repeat(10, 1fr);
 	}
 
-	/*Most popular posts*/
+/*Most popular posts*/
 
 	#most_p_container {
 		height: 125rem;
