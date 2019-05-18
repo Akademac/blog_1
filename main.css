@@ -46,13 +46,11 @@ body {
 	height: 3rem;
 	background-color: var(--mainBlack);
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	padding: .5rem;
 }
 
 #main_search {
 	width: 17rem;
-	margin: 0px auto;
+	margin-left: 1rem;
 	margin-top: .5rem;
 	height: 2rem;
 	font-size: 1rem;
@@ -63,41 +61,6 @@ body {
 
 }
 
-#main_filter {
-	float: right;
-	display: inline-block;
-	position: relative;
-	width: 12rem;
-	height: 2.2rem;
-	margin: 0px auto;
-	border: none;
-	border-radius: 5px;
-	margin-top: .5rem;
-}
-
-
-#oldest {
-	width: 8rem;
-	box-shadow: 1px 1px 1px black;
-	height: 3rem;
-	padding: .3rem;
-	margin-top: .3rem;
-	border-radius: 5px;
-	cursor: pointer;
-	background-color: var(--mainWhite);
-	display: inline;
-	border: none;
-	transition: 1s all;
-	font-family: 'Roboto', sans-serif;
-	font-weight: bolder;
-	margin-left: .4rem;
-
-}
-
-#oldest:hover {
-	background-color: var(--mainBlack);
-	color: var(--mainWhite);
-}
 
 /*Newest Posts*/
 
@@ -382,38 +345,39 @@ hr {
 	height: 300vh;
 	background-color: lightgrey; 
 	display: grid;
-	grid-template-columns: 50% 50%;
+	grid-template-rows: 30% 70%;
 
 }
 
 #blog_text {
 	background-color: #FCFCFC;
-
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 #text1 {
 	font-size: 1.5rem;
-	margin-left: 5rem;
-	width: 80%;
+	margin-left: 1rem;
+	width: 90%;
 	text-align:justify;
 
 
 }
 
 #blog_title {
-	margin-left: 5rem;
+	margin-left: 1rem;
 	text-transform: uppercase;
 
 }
 
 #blog_imgs {
 	display: grid;
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .blog_imgs {
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	height: 100%;
 }
 
 #blog_imgs div:nth-child(1) {
@@ -421,10 +385,13 @@ hr {
 	background-position: center;
 	background-size: cover;
 }
+
 #blog_imgs div:nth-child(2) {
 	background-position: center;
 	background-size: cover;
-}#blog_imgs div:nth-child(3) {
+}
+
+#blog_imgs div:nth-child(3) {
 	background-position: center;
 	background-size: cover;
 }
@@ -432,13 +399,53 @@ hr {
 #blog_video {
 	width: 70%;
 	height: 25rem;
-	background-color: red;
-	margin-left: 5rem;
+	margin: 5rem auto;
+	position: relative;
+	background-color: var(--mainBlack);
+}
 
+#pause {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 2rem;
+	display: none;
+	cursor: pointer;
+	transition: 2s all;
+	color: var(--mainWhite);
+	opacity: .3;
+}
+
+#pause:hover {
+	font-size: 3rem;
+	opacity: 1;
+}
+
+#play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 2rem;
+	cursor: pointer;
+	transition: 1s all;
+	color: var(--mainWhite);
+	opacity: .5;
+}
+
+#play:hover {
+	font-size: 3rem;
+	opacity: 1
+}
+
+#video {
+	width: 100%;
+	height: 100%;
 }
 
 #blog_form {
-	margin: 1rem auto;
+	margin-left: 1rem;
 }
 
 #blog_form > input {
@@ -574,17 +581,77 @@ hr {
 	.smp_date {
 		margin-top: 10rem;
 	}
+
+/*Second page*/
+
+	#blog_container {
+		height: 270rem;
+		grid-template-rows: 60% 40%;
+	}
+
+	#blog_text {
+		grid-template-columns: none;
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	#text1 {
+		font-size: 1.5rem;
+		margin-left: 1rem;
+		width: 90%;
+		text-align:justify;
+	}
+
+	#blog_imgs {
+		display: grid;
+		grid-template-columns: none;
+		grid-template-rows: repeat(3, 1fr);
+	}
+
+	#blog_video {
+		width: 70%;
+		height: 25rem;
+		margin: 2rem auto;
+		position: relative;
+		background-color: var(--mainBlack);
+	}
+
+	#blog_form {
+		margin-left: 0rem;
+	}
+
+	#blog_form > input {
+		margin-left: 1rem;
+	}
+
+	#blog_form > textarea {
+		display: block;
+		margin-left: 1rem;
+	}
+
+	#blog_form > button {
+		display: block;
+		margin-left: 1rem;
+	}
+
+	#comment_title {
+		margin-left: 1rem;
+	}
+
+	.comments {
+		margin-left: 1rem;
+
+	}
 }
 
 
 
 @media screen and (max-width: 500px) {
-	/*Header*/
+/*Header*/
 
 	#header {
 		font-size: 1rem;
 	}
-	/*Search and Filter*/
+/*Search and Filter*/
 
 	#f_s {
 		padding: 0px;
@@ -595,10 +662,11 @@ hr {
 		font-size: .7rem;
 		padding-left: 0px;
 	}
-	/*Newest Posts*/
+
+/*Newest Posts*/
 
 	#newest_container {
-		height: 320rem;
+		height: 325rem;
 		padding: 0rem;
 	}
 
@@ -610,7 +678,7 @@ hr {
 		grid-template-rows: repeat(10, 1fr);
 	}
 
-	/*Most popular posts*/
+/*Most popular posts*/
 
 	#most_p_container {
 		height: 125rem;
@@ -646,6 +714,10 @@ hr {
 		margin-top: 12.5rem;
 	}
 
+	#blog_container {
+		height: 350rem;
+		grid-template-rows: 60% 40%;
+	}
 }
 
 
@@ -717,4 +789,8 @@ hr {
 		margin-top: 12.5rem;
 	}
 
+	#blog_container {
+		height: 360rem;
+		grid-template-rows: 60% 40%;
+	}
 }
