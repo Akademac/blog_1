@@ -27,7 +27,7 @@ fetch('https://akademac.github.io/testJson_3/test_josn_3.json')
 })
 .then(data => {
 
-	for(let i=0; i<10; i++) {
+	for(let i=0; i<12; i++) {
 		if(z == `#${a}`) {
 			blog_title.innerHTML = data[i].title;
 			blog_text.innerHTML = data[i].text;
